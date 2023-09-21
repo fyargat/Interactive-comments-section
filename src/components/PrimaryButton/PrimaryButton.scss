@@ -1,21 +1,25 @@
 @import "../../styles/variables";
 
 .button {
+  overflow: hidden;
+
+  width: 100px;
   min-width: 104px;
   max-width: 300px;
+  height: 100px;
   min-height: 48px;
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
   padding: 12px 20px;
-  border-radius: 8px;
-  background-color: $moderate-blue;
-  color: $white;
+
   font-feature-settings: "clig" off, "liga" off;
   font-weight: 500;
+  color: $white;
+  text-overflow: ellipsis;
   text-transform: uppercase;
+  white-space: nowrap;
+
+  background-color: $moderate-blue;
+  border-radius: 8px;
+
   transition: background-color 0.3s ease;
 
   &:hover {

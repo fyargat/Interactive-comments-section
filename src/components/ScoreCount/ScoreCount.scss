@@ -2,38 +2,41 @@
 
 .score-count__container {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  // gap: 10px;
+
   width: 100px;
   height: 40px;
-  flex-shrink: 0;
-  border-radius: 10px;
+
   background-color: $very-light-gray;
+  border-radius: 10px;
 
   @media screen and (min-width: $tablet) {
-    height: 100px;
-    width: 40px;
     flex-direction: column;
+    width: 40px;
+    height: 100px;
   }
 }
 
 .score-count__number {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex: calc(100% / 3);
+  align-items: center;
+  justify-content: center;
+
+  line-height: 19px;
   color: $moderate-blue;
   text-align: center;
-  line-height: 19px;
 }
 
 .score-count__button {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
   flex: calc(100% / 3);
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
 
   svg :deep(path) {
     transition: fill 0.3s ease;
@@ -52,7 +55,7 @@
   }
 
   @media screen and (min-width: $tablet) {
-    height: auto;
     width: 100%;
+    height: auto;
   }
 }

@@ -4,12 +4,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   width: 100%;
   min-height: 189px;
   padding: 16px;
   padding-bottom: 13px;
-  border-radius: 8px;
+
   background-color: $white;
+  border-radius: 8px;
 
   @media screen and (min-width: $tablet) {
     min-height: 144px;
@@ -22,9 +24,9 @@
 
   @media screen and (min-width: $tablet) {
     display: flex;
-    justify-content: space-between;
-    align-items: start;
     gap: 16px;
+    align-items: start;
+    justify-content: space-between;
   }
 }
 
@@ -42,17 +44,22 @@
 }
 
 .message-input__textarea {
+  resize: none;
+
+  overflow: auto;
+  overflow: hidden;
+
   width: 100%;
   min-height: 96px;
   padding: 12px 24px;
-  border-radius: 8px;
-  border: 1px solid $light-gray;
-  background-color: $white;
-  resize: none;
-  overflow: auto;
-  overflow: hidden;
-  color: $grayish-blue;
+
   font-feature-settings: "clig" off, "liga" off;
+  color: $grayish-blue;
+
+  background-color: $white;
+  border: 1px solid $light-gray;
+  border-radius: 8px;
+
   transition: border-color 0.3s ease;
 
   &:focus {
@@ -68,7 +75,4 @@
   @media screen and (min-width: $tablet) {
     display: none;
   }
-}
-
-.message-input__avatar {
 }

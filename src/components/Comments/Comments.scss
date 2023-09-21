@@ -9,11 +9,11 @@
 }
 
 .comments__replies {
-  border-left: 2px solid $light-gray;
   padding-left: 16px;
+  border-left: 2px solid $light-gray;
 
   @media screen and (min-width: $tablet) {
-    padding-left: 43px;
     margin-left: 43px;
+    padding-left: 43px;
   }
 }

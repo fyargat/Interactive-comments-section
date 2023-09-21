@@ -1,8 +1,8 @@
 @import "../../styles/variables";
 
 .comment__container {
-  background-color: $white;
   padding: 16px;
+  background-color: $white;
   border-radius: 8px;
 
   &--reply {
@@ -11,8 +11,8 @@
 
   @media screen and (min-width: $tablet) {
     display: flex;
-    justify-content: space-between;
     gap: 24px;
+    justify-content: space-between;
   }
 }
 
@@ -22,8 +22,8 @@
 
 .comment__header {
   display: flex;
-  align-items: center;
   gap: 16px;
+  align-items: center;
   margin-bottom: 16px;
 }
 
@@ -32,25 +32,29 @@
 }
 
 .comment__user {
-  color: $dark-blue;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
   font-feature-settings: "clig" off, "liga" off;
   font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  color: $dark-blue;
 }
 
 .comment__user-current {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
   width: 36px;
   height: 19px;
-  border-radius: 2px;
-  background: $moderate-blue;
-  color: $white;
+
   font-size: 13px;
   font-weight: 500;
+  color: $white;
+
+  background: $moderate-blue;
+  border-radius: 2px;
 }
 
 .comment__date {
@@ -58,8 +62,8 @@
 }
 
 .comment__replying-to {
-  color: $moderate-blue;
   font-weight: 500;
+  color: $moderate-blue;
 }
 
 .comment__edit-block {
@@ -74,17 +78,22 @@
 }
 
 .comment__textarea {
-  width: 100%;
-  min-height: 100px;
-  padding: 12px 24px;
-  margin-bottom: 16px;
-  border-radius: 8px;
-  border: 1px solid $light-gray;
   resize: none;
+
   overflow: auto;
   overflow: hidden;
-  color: $dark-blue;
+
+  width: 100%;
+  min-height: 100px;
+  margin-bottom: 16px;
+  padding: 12px 24px;
+
   font-feature-settings: "clig" off, "liga" off;
+  color: $dark-blue;
+
+  border: 1px solid $light-gray;
+  border-radius: 8px;
+
   transition: border-color 0.3s ease;
 
   &:focus {
@@ -93,8 +102,8 @@
 }
 
 .comment__text {
-  font-feature-settings: "clig" off, "liga" off;
   margin-bottom: 16px;
+  font-feature-settings: "clig" off, "liga" off;
 
   @media screen and (min-width: $tablet) {
     margin-bottom: 0;
@@ -109,16 +118,18 @@
 
 .comment__user-buttons {
   display: flex;
-  align-items: center;
   gap: 24px;
+  align-items: center;
 }
 
 .comment-button {
   display: flex;
-  align-items: center;
   gap: 8px;
+  align-items: center;
+
   font-feature-settings: "clig" off, "liga" off;
   font-weight: 500;
+
   transition: color 0.3s ease;
 
   svg :deep(path) {
