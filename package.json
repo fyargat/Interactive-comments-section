@@ -11,8 +11,14 @@
     "build-storybook": "storybook build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "lint:css": "stylelint src/**/*.scss"
+    "lint:css": "stylelint src/**/*.scss",
+    "lint-staged": "lint-staged"
   },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --fix", 
+    "*.{css,scss}": "stylelint --fix"
+  },
+
   "dependencies": {
     "@vue/compiler-sfc": "^3.3.4",
     "date-fns": "^2.30.0",
@@ -36,6 +42,7 @@
     "@types/node": "^20.6.2",
     "@vitejs/plugin-vue": "^4.2.3",
     "gh-pages": "^6.0.0",
+    "lint-staged": "^14.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.67.0",
