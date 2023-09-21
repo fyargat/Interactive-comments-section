@@ -137,19 +137,22 @@
 </template>
 
 <script setup lang="ts">
+import { formatDistanceToNow } from "date-fns";
+import { computed, ref } from "vue";
 import InlineSvg from "vue-inline-svg";
-import Avatar from "../Avatar";
-import ScoreCount from "../ScoreCount";
+
+import { Comment, CommentId, User } from "@/types";
+
+import { getAvatarPath } from "@/helpers/avatar";
+
+import Avatar from "@/components/Avatar";
+import MessageInput from "@/components/MessageInput";
+import PrimaryButton from "@/components/PrimaryButton";
+import ScoreCount from "@/components/ScoreCount";
 
 import deleteIconPath from "@/assets/images/icon-delete.svg";
 import editIconPath from "@/assets/images/icon-edit.svg";
 import replyIconPath from "@/assets/images/icon-reply.svg";
-import PrimaryButton from "@/components/PrimaryButton";
-import { getAvatarPath } from "@/helpers/avatar";
-import { Comment, CommentId, User } from "@/types";
-import { formatDistanceToNow } from "date-fns";
-import { computed, ref } from "vue";
-import MessageInput from "../MessageInput";
 
 interface Props {
   currentUser: User | null;
@@ -168,7 +171,7 @@ const isReply = ref<boolean>(false);
 const text = ref<string>(props.comment.content);
 
 const avatarPath = computed(() =>
-  getAvatarPath(props.comment.user?.image.webp)
+  getAvatarPath(props.comment.user?.image.webp),
 );
 const isCurrentUserComment =
   props.currentUser?.username === props.comment.user.username;

@@ -1,10 +1,12 @@
 import { createPinia } from "pinia";
 import { createApp } from "vue";
-import App from "./App.vue";
-import { clickOutside } from "./directives/v-click-outside";
-import { focusDirective } from "./directives/v-focus";
 
-import "./styles/index.scss";
+import { clickOutside } from "@/directives/v-click-outside";
+import { focusDirective } from "@/directives/v-focus";
+
+import "@/styles/index.scss";
+
+import App from "./App.vue";
 
 const pinia = createPinia();
 const app = createApp(App);

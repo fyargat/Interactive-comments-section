@@ -21,8 +21,8 @@
 <script setup lang="ts">
 import InlineSvg from "vue-inline-svg";
 
-import minusIconPath from "../../assets/images/icon-minus.svg";
-import plusIconPath from "../../assets/images/icon-plus.svg";
+import minusIconPath from "@/assets/images/icon-minus.svg";
+import plusIconPath from "@/assets/images/icon-plus.svg";
 
 interface Props {
   count: number;

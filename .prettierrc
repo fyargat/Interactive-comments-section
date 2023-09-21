@@ -1,0 +1,27 @@
+{
+  "tabWidth": 2,
+  "printWidth": 80,
+  "semi": true,
+  "arrowParens": "always",
+  "endOfLine": "auto",
+  "trailingComma": "all",
+  "singleQuote": false,
+  "bracketSpacing": true,
+
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "^@/types(.*)$",
+    "^@/store/(.*)$",
+    "^@/directives/(.*)$",
+    "^@/api(.*)$",
+    "^@/data/(.*)$",
+    "^@/local-storage(.*)$",
+    "^@/helpers/(.*)$",
+    "^@/components/(.*)$",
+    "^@/styles/(.*)$",
+    "^@/assets/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

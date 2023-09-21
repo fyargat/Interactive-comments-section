@@ -4,6 +4,7 @@ import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/interactive-comments-section/",
   plugins: [vue()],
   resolve: {
     alias: {

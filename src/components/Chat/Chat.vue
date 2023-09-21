@@ -19,12 +19,14 @@
 </template>
 
 <script setup lang="ts">
-import Comments from "@/components/Comments";
-import DeleteCommentModal from "@/components/DeleteCommentModal";
-import { useCommentStore } from "@/store/useCommentStore";
 import { storeToRefs } from "pinia";
 import { onMounted } from "vue";
-import MessageInput from "../MessageInput";
+
+import { useCommentStore } from "@/store/useCommentStore";
+
+import Comments from "@/components/Comments";
+import DeleteCommentModal from "@/components/DeleteCommentModal";
+import MessageInput from "@/components/MessageInput";
 
 const commentStore = useCommentStore();
 

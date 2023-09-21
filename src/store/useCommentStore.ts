@@ -1,14 +1,18 @@
-import { api } from "@/api";
-import { Comment, CommentId, User } from "@/types";
 import { defineStore } from "pinia";
 import { computed, ref, watch } from "vue";
+
+import { Comment, CommentId, User } from "@/types";
+
+import { api } from "@/api";
+
+import localStorage from "@/local-storage";
+
 import {
   createComment,
   createReply,
   findCommentById,
   findParentCommentById,
-} from "../helpers/comment";
-import localStorage from "../local-storage";
+} from "@/helpers/comment";
 
 const USER_STORE_NAME = "user";
 const COMMENTS_STORE_NAME = "comments";
@@ -60,7 +64,7 @@ export const useCommentStore = defineStore("comments", () => {
     comments.value = comments.value.filter((comment) => {
       if (comment.replies && comment.replies.length) {
         comment.replies = comment.replies.filter(
-          (reply) => reply.id !== commentIdToDelete.value
+          (reply) => reply.id !== commentIdToDelete.value,
         );
       }
 
@@ -106,7 +110,7 @@ export const useCommentStore = defineStore("comments", () => {
     (newValue) => {
       localStorage.set(COMMENTS_STORE_NAME, newValue);
     },
-    { deep: true }
+    { deep: true },
   );
 
   return {

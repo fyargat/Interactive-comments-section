@@ -1,5 +1,6 @@
-import { Comment, CommentId, User } from "@/types";
 import { nanoid } from "nanoid";
+
+import { Comment, CommentId, User } from "@/types";
 
 export const findCommentById = (comments: Comment[], id: CommentId) => {
   let result = null;
@@ -61,7 +62,7 @@ export const createComment = (content: string, user: User) => {
 export const createReply = (
   content: string,
   user: User,
-  replyingTo: string
+  replyingTo: string,
 ) => {
   const reply: Comment = {
     id: nanoid(),

@@ -26,10 +26,12 @@
 
 <script setup lang="ts">
 import { getAvatarPath } from "@/helpers/avatar";
-import { User } from "@/types";
 import { computed, ref } from "vue";
-import Avatar from "../Avatar";
-import PrimaryButton from "../PrimaryButton";
+
+import { User } from "@/types";
+
+import Avatar from "@/components/Avatar";
+import PrimaryButton from "@/components/PrimaryButton";
 
 interface Props {
   currentUser: User | null;

@@ -36,8 +36,9 @@
 </template>
 
 <script setup lang="ts">
-import Comment from "@/components/Comment";
 import { CommentId, Comment as IComment, User } from "@/types";
+
+import Comment from "@/components/Comment";
 
 interface Props {
   comments: IComment[];

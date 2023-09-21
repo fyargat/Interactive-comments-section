@@ -8,7 +8,7 @@ interface ExtendedHTMLElement extends HTMLElement {
 
 function clickOutsideHandler(
   this: ExtendedHTMLElement,
-  bind: DirectiveBinding<Function>
+  bind: DirectiveBinding<Function>,
 ): ClickOutside {
   return (event) => {
     if (event.target instanceof Element) {
@@ -20,13 +20,13 @@ function clickOutsideHandler(
 }
 
 export const clickOutside: ObjectDirective<ExtendedHTMLElement, Function> = {
-  beforeMount(element, bind, vn): void {
+  beforeMount(element, bind): void {
     const isDirectiveValueFunction =
       bind?.value?.constructor.name === "Function";
 
     if (!isDirectiveValueFunction) {
       throw Error(
-        "[v-click-outside-element] Function should be provided in the directive"
+        "[v-click-outside-element] Function should be provided in the directive",
       );
     }
 
