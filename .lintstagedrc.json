@@ -1,0 +1,6 @@
+{
+  "*.ts": ["tsc"],
+  "*.{js,ts,vue}": ["prettier --write"],
+  "*.html": ["prettier --write"],
+  "*.{css,scss}": "stylelint --fix"
+}
