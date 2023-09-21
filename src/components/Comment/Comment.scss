@@ -1,0 +1,167 @@
+@import "../../styles/variables";
+
+.comment__container {
+  background-color: $white;
+  padding: 16px;
+  border-radius: 8px;
+
+  &--reply {
+    margin-bottom: 8px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+}
+
+.comment__right {
+  flex: 1;
+}
+
+.comment__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.comment__header-buttons {
+  margin-left: auto;
+}
+
+.comment__user {
+  color: $dark-blue;
+  font-feature-settings: "clig" off, "liga" off;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comment__user-current {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 19px;
+  border-radius: 2px;
+  background: $moderate-blue;
+  color: $white;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.comment__date {
+  font-feature-settings: "clig" off, "liga" off;
+}
+
+.comment__replying-to {
+  color: $moderate-blue;
+  font-weight: 500;
+}
+
+.comment__edit-block {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.comment__textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px 24px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid $light-gray;
+  resize: none;
+  overflow: auto;
+  overflow: hidden;
+  color: $dark-blue;
+  font-feature-settings: "clig" off, "liga" off;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    border-color: $moderate-blue;
+  }
+}
+
+.comment__text {
+  font-feature-settings: "clig" off, "liga" off;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.comment__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment__user-buttons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.comment-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-feature-settings: "clig" off, "liga" off;
+  font-weight: 500;
+  transition: color 0.3s ease;
+
+  svg :deep(path) {
+    transition: fill 0.3s ease;
+  }
+
+  &--blue {
+    color: $moderate-blue;
+
+    &:hover,
+    &:disabled {
+      color: $light-grayish-blue;
+
+      svg :deep(path) {
+        fill: $light-grayish-blue;
+      }
+    }
+  }
+
+  &--red {
+    color: $soft-red;
+
+    &:hover,
+    &:disabled {
+      color: $pale-red;
+
+      svg :deep(path) {
+        fill: $pale-red;
+      }
+    }
+  }
+}
+
+.desktop-visible {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.desktop-invisible {
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}

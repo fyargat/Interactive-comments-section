@@ -1,0 +1,13 @@
+.chat__container {
+  padding: 32px 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chat__wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}

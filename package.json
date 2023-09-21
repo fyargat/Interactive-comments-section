@@ -1,0 +1,42 @@
+{
+  "name": "interactive-comments-vue",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "date-fns": "^2.30.0",
+    "nanoid": "^5.0.1",
+    "pinia": "^2.1.6",
+    "vue": "^3.3.4",
+    "vue-inline-svg": "^3.1.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.4.2",
+    "@storybook/addon-interactions": "^7.4.2",
+    "@storybook/addon-links": "^7.4.2",
+    "@storybook/blocks": "^7.4.2",
+    "@storybook/testing-library": "^0.2.1",
+    "@storybook/vue3": "^7.4.2",
+    "@storybook/vue3-vite": "^7.4.2",
+    "@types/node": "^20.6.2",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.67.0",
+    "scss-reset": "^1.4.2",
+    "storybook": "^7.4.2",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vue-tsc": "^1.8.5"
+  },
+  "resolutions": {
+    "jackspeak": "2.1.1"
+  }
+}

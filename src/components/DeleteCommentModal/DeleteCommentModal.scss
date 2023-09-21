@@ -1,0 +1,92 @@
+@import "../../styles/variables";
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($black, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__content {
+  max-width: 343px;
+  width: 100%;
+  min-height: 224px;
+  border-radius: 8px;
+  background-color: $white;
+  padding: 24px 28px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 400px;
+    min-height: 252px;
+    padding: 32px;
+  }
+}
+
+.modal__title {
+  margin-bottom: 16px;
+  color: $dark-blue;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+}
+
+.modal__text {
+  margin-bottom: 16px;
+  font-feature-settings: "clig" off, "liga" off;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 20px;
+  }
+}
+
+.modal__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal__button {
+  padding: 12px 16px;
+  color: $white;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-weight: 500;
+  border-radius: 8px;
+  max-width: 138px;
+  width: 100%;
+  min-height: 48px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 161px;
+  }
+
+  &--cancel {
+    background-color: $grayish-blue;
+
+    &:hover {
+      background-color: $light-grayish-blue;
+    }
+  }
+
+  &--confirm {
+    background-color: $soft-red;
+
+    &:hover {
+      background-color: $pale-red;
+    }
+  }
+}

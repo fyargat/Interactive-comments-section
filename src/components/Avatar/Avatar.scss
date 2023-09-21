@@ -1,0 +1,9 @@
+@import "../../styles/variables";
+
+.avatar__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 32px;
+  min-height: 32px;
+}

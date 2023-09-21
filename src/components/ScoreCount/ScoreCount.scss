@@ -1,0 +1,58 @@
+@import "../../styles/variables";
+
+.score-count__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // gap: 10px;
+  width: 100px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background-color: $very-light-gray;
+
+  @media screen and (min-width: $tablet) {
+    height: 100px;
+    width: 40px;
+    flex-direction: column;
+  }
+}
+
+.score-count__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: calc(100% / 3);
+  color: $moderate-blue;
+  text-align: center;
+  line-height: 19px;
+}
+
+.score-count__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex: calc(100% / 3);
+
+  svg :deep(path) {
+    transition: fill 0.3s ease;
+  }
+
+  &:hover {
+    svg :deep(path) {
+      fill: $moderate-blue;
+    }
+  }
+
+  &:disabled {
+    svg :deep(path) {
+      fill: $pale-red;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    height: auto;
+    width: 100%;
+  }
+}
